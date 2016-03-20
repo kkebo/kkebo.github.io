@@ -2,11 +2,6 @@
 ---
 @charset "UTF-8";
 
-/* zocial */
-[class*="zocial-"]:before {
-  font-family: 'zocial', sans-serif;
-}
-
 @font-face {
 	font-family: 'NotoSansJP-Regular';
 	src: url('fonts/NotoSansJP-Regular-Subsetted.woff') format('woff');
