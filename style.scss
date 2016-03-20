@@ -121,7 +121,8 @@ section {
 	div:last-child {
 		position: absolute;
 		width: 360px;
-		text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px #fff, 0 0 12px #fff;
+		text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px #fff, 0 0 12px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff, 1px 1px #fff;
+		pointer-events: none;
 		@media only screen and (max-width : 599px) {
 			width: 180px;
 		}
@@ -142,6 +143,9 @@ section {
 		}
 		p {
 			font-size: 14px;
+		}
+		a {
+			pointer-events: auto;
 		}
 	}
 }
