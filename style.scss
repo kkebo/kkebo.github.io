@@ -100,7 +100,7 @@ section {
 			width: 240px;
 			height: 135px;
 		}
-		img {
+		img, video {
 			height: 270px;
 			@media only screen and (max-width : 599px) {
 				height: 135px;
