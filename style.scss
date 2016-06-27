@@ -40,7 +40,7 @@ nav {
 			box-shadow .5s;
 		
 		&:hover, &:active {
-			box-shadow:0 5px 12px -5px #999 inset;
+			box-shadow: 0 5px 12px -5px #999 inset;
 			color: #000;
 		}
 		&:hover {
@@ -101,15 +101,15 @@ section {
 		}
 	}
 	div:first-child:after {
-		content:'';
-		position:absolute;
-		z-index:-1;
-		top:50%;
-		bottom:-5px;
-		left:15px;
-		right:15px;
-		box-shadow:0 0 40px rgba(0,0,0,0.7);
-		border-radius:100px / 40px;
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 50%;
+		bottom: -5px;
+		left: 15px;
+		right: 15px;
+		box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+		border-radius: 100px / 40px;
 	}
 	div:last-child {
 		position: absolute;
