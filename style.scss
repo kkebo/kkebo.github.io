@@ -2,24 +2,18 @@
 ---
 @charset "UTF-8";
 
-@font-face {
-	font-family: 'NotoSansJP-Regular';
-	src: url('fonts/NotoSansJP-Regular-Subsetted.eot?#iefix') format('embedded-opentype'), url('fonts/NotoSansJP-Regular-Subsetted.woff2') format('woff2'), url('fonts/NotoSansJP-Regular-Subsetted.woff') format('woff'), url('fonts/NotoSansJP-Regular-Subsetted.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+@mixin font-face($font) {	
+	@font-face {
+		font-family: $font;
+		src: url('fonts/' + $font + '.eot?#iefix') format('embedded-opentype'), url('fonts/' + $font + '.woff2') format('woff2'), url('fonts/' + $font + '.woff') format('woff'), url('fonts/' + $font + '.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+	}
 }
-@font-face {
-	font-family: 'PoiretOne-Regular';
-	src: url('fonts/PoiretOne-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/PoiretOne-Regular.woff2') format('woff2'), url('fonts/PoiretOne-Regular.woff') format('woff'), url('fonts/PoiretOne-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'KouzanMouhituFont';
-	src: url('fonts/KouzanMouhituFont.eot?#iefix') format('embedded-opentype'), url('fonts/KouzanMouhituFont.woff2') format('woff2'), url('fonts/KouzanMouhituFont.woff') format('woff'), url('fonts/KouzanMouhituFont.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
+
+@include font-face('NotoSansJP-Regular-Subsetted');
+@include font-face('PoiretOne-Regular');
+@include font-face('KouzanMouhituFont');
 
 * {
 	margin: 0;
@@ -28,7 +22,7 @@
 
 body {
 	background-color: #eee;
-	font-family: 'NotoSansJP-Regular', Sans-Serif;
+	font-family: 'NotoSansJP-Regular-Subsetted', Sans-Serif;
 }
 
 nav {
