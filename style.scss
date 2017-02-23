@@ -158,9 +158,13 @@ aside {
 		}
 		color: gray;
 		margin: 0 10px;
+		transition: color .5s;
 		
 		&:link, &:visited, &:active, &:hover {
 			color: gray;
+		}
+		&:hover, &:active {
+			color: #000;
 		}
 	}
 }
