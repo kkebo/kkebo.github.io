@@ -110,6 +110,12 @@ section {
 			0 5px 10px #888;
 		overflow: hidden;
 		margin: 0 10px;
+		transition: box-shadow 0.5s;
+		
+		&:hover, &:active {
+			box-shadow: 0 30px 60px #777,
+				0 10px 20px #777;
+		}
 		
 		img, video {
 			width: 100%;
