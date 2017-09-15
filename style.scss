@@ -26,6 +26,7 @@
 body {
 	background-color: #eee;
 	font-family: 'NotoSansJP-Regular-Subsetted', Sans-Serif;
+	padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
 }
 
 nav {
