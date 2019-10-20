@@ -20,8 +20,19 @@
     padding: 0;
 }
 
+:root {
+    color-scheme: light dark;
+    --background-color: #eee;
+    --text-color: #000;
+    
+    @media (prefers-color-scheme: dark) {
+        --background-color: #111;
+        --text-color: #fff;
+    }
+}
+
 body {
-    background-color: #eee;
+    background-color: var(--background-color);
     font-family: 'NotoSansJP-Regular-Subsetted', Sans-Serif;
     padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
 }
@@ -35,14 +46,14 @@ nav {
         padding: 10px;
         text-decoration: none;
         -webkit-tap-highlight-color: transparent;
-        color: #000;
+        color: var(--text-color);
         border-radius: 5px;
         transition: background-color .5s,
             box-shadow .5s;
         
         &:hover, &:active {
             box-shadow: 0 5px 12px -5px #999 inset;
-            color: #000;
+            color: var(--text-color);
         }
         &:hover {
             background-color: #ccc;
@@ -55,6 +66,7 @@ nav {
 header {
     clear: left;
     font-family: 'PoiretOne-Regular', Sans-Serif;
+    color: var(--text-color);
     display: block;
     width: 400px;
     margin: 50px auto;
@@ -97,6 +109,9 @@ section {
         > :first-child {
             box-shadow: 0 30px 60px #777,
                 0 10px 20px #777;
+            @media (prefers-color-scheme: dark) {
+                box-shadow: none;
+            }
         }
     }
     > :first-child {
@@ -112,6 +127,9 @@ section {
         box-sizing: border-box;
         box-shadow: 0 15px 30px #888,
             0 5px 10px #888;
+        @media (prefers-color-scheme: dark) {
+            box-shadow: none;
+        }
         overflow: hidden;
         margin: 0 10px;
         transition: box-shadow 0.5s;
@@ -135,7 +153,7 @@ section {
             font-weight: bold;
             a {
                 text-decoration: none;
-                color: #000;
+                color: var(--text-color);
             }
         }
         p {
@@ -169,7 +187,7 @@ aside {
             color: gray;
         }
         &:hover, &:active {
-            color: #000;
+            color: var(--text-color);
         }
     }
 }
@@ -178,4 +196,5 @@ footer {
     margin: 10px 0;
     text-align: center;
     font-size: 14px;
+    color: var(--text-color);
 }
