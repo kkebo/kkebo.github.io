@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'PoiretOne-Regular';
+    src: url('/fonts/PoiretOne-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NotoSansJP-Regular-Subsetted';
+    src: url('/fonts/NotoSansJP-Regular-Subsetted.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    color-scheme: light dark;
+    --button-size: 200px;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-color: #d6d6d6;
+        --light-color: #b6b6b6;
+        --dark-color: #f6f6f6;
+        --text-color: #474747;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #474747;
+        --light-color: #3c3c3c;
+        --dark-color: #525252;
+        --text-color: #d6d6d6;
+    }
+}
+
+body {
+    background-color: var(--background-color);
+    padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
+}
+
+body > * {
+    margin: 50px auto;
+}
+
+header {
+    font-family: 'PoiretOne-Regular', Sans-Serif;
+    color: var(--text-color);
+    display: block;
+    width: 400px;
+}
+
+@media only screen and (max-width: 599px) {
+    header {
+        width: 320px;
+    }
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+header h1 span {
+    font-size: 72px;
+}
+
+header p {
+    text-align: right;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+ul > li > a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--button-size);
+    height: var(--button-size);
+    border-radius: 30%;
+    background-color: var(--background-color);
+    box-shadow: calc(var(--button-size) / 10) calc(var(--button-size) / 10) calc(var(--button-size) / 5) var(--light-color),
+        calc(var(--button-size) / -10) calc(var(--button-size) / -10) calc(var(--button-size) / 5) var(--dark-color);
+
+    font-size: calc(var(--button-size) / 2.5);
+    color: var(--text-color);
+    -webkit-text-fill-color: var(--background-color);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--text-color);
+}
+
+ul > li > a:active {
+    box-shadow: inset calc(var(--button-size) / 10) calc(var(--button-size) / 10) calc(var(--button-size) / 5) var(--light-color),
+        inset calc(var(--button-size) / -10) calc(var(--button-size) / -10) calc(var(--button-size) / 5) var(--dark-color);
+
+    -webkit-text-fill-color: var(--text-color);
+    -webkit-text-stroke-width: 0;
+}
+
+ul > li > a:hover {
+    -webkit-text-fill-color: var(--text-color);
+    -webkit-text-stroke-width: 0;
+}
+
+@media only screen and (max-width: 599px) {
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul > li > a {
+        margin: 50px auto;
+        width: calc(var(--button-size) / 2);
+        height: calc(var(--button-size) / 2);
+        box-shadow: calc(var(--button-size) / 20) calc(var(--button-size) / 20) calc(var(--button-size) / 10) var(--light-color),
+            calc(var(--button-size) / -20) calc(var(--button-size) / -20) calc(var(--button-size) / 10) var(--dark-color);
+
+        font-size: calc(var(--button-size) / 5);
+    }
+
+    ul > li > a:active {
+        box-shadow: inset 10px 10px 20px var(--light-color),
+            inset -10px -10px 20px var(--dark-color);
+    }
+}
+
+footer {
+    display: block;
+    text-align: center;
+    font-family: 'NotoSansJP-Regular-Subsetted', Sans-Serif;
+    font-size: 14px;
+    color: var(--text-color);
+}
