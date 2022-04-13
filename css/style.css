@@ -109,6 +109,8 @@ ul > li > a {
 ul > li > a > sub {
     font-family: 'NotoSansJP-Regular-Subsetted', Sans-Serif;
     font-size: 24px;
+    -webkit-text-fill-color: initial;
+    -webkit-text-stroke-width: 0;
 }
 
 ul > li > a:active {
@@ -139,6 +141,10 @@ ul > li > a:hover {
 
         font-size: calc(var(--button-size) / 5);
     }
+
+    ul > li > a > sub {
+        font-size: 12px;
+    } 
 
     ul > li > a:active {
         box-shadow: inset 10px 10px 20px var(--light-color),
