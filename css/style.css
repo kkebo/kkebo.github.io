@@ -80,8 +80,10 @@ header p {
 
 ul {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-evenly;
+    gap: 50px;
+    margin: 50px;
     list-style: none;
 }
 
@@ -133,7 +135,6 @@ ul > li > a:hover {
     }
 
     ul > li > a {
-        margin: 50px auto;
         width: calc(var(--button-size) / 2);
         height: calc(var(--button-size) / 2);
         box-shadow: calc(var(--button-size) / 20) calc(var(--button-size) / 20) calc(var(--button-size) / 10) var(--light-color),
