@@ -1,3 +1,3 @@
-# kkk669.github.io
+# kkebo.github.io
 
 Visit https://kebo.xyz
