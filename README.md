@@ -1,3 +1,3 @@
 # kkebo.github.io
 
-Visit https://kebo.xyz
+Visit https://kebo.dev
